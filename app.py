@@ -551,11 +551,11 @@ def compare_suppliers(best_a, best_b, name_a, name_b):
     for amt in sorted(set(best_a.keys()) & set(best_b.keys())):
         row_a, row_b = best_a[amt], best_b[amt]
 
-        # Skip if both sides are purely catch-all coverage
-        a_is_catchall = row_a["rule"]["type"] == "all"
-        b_is_catchall = row_b["rule"]["type"] == "all"
-        if a_is_catchall and b_is_catchall:
-            continue
+        # # Skip if both sides are purely catch-all coverage
+        # a_is_catchall = row_a["rule"]["type"] == "all"
+        # b_is_catchall = row_b["rule"]["type"] == "all"
+        # if a_is_catchall and b_is_catchall:
+        #     continue
 
         r1, r2 = row_a["rate"], row_b["rate"]
         if r1 == r2:
