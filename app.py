@@ -423,7 +423,7 @@ def load_supplier_rows(uploaded_file, supplier_name: str) -> List[Dict[str, Any]
             continue
 
         if _margin_mode == "decimal":
-            rate = round(fv * 100, 4)
+            rate = round(fv, 4)
         else:
             rate = round(fv, 4)
 
